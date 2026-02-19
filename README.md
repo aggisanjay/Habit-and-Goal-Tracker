@@ -12,8 +12,6 @@
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io)
 
-![HabitFlow Dashboard Preview](https://via.placeholder.com/900x480/0a0a0b/f59e0b?text=HabitFlow+Dashboard)
-
 </div>
 
 ---
