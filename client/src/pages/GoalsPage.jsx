@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
 import { goalsAPI } from '../utils/api';
 import './GoalsPage.css';
@@ -266,8 +265,8 @@ export default function GoalsPage() {
   const [editGoal, setEditGoal] = useState(null);
   const [detailGoal, setDetailGoal] = useState(null);
 
-  const load = useCallback(async () => {
-    setLoading(true);
+  const load = useCallback(async (showSpinner = false) => {
+    if (showSpinner) setLoading(true);
     setError('');
     try {
       const res = await goalsAPI.getAll();
@@ -278,7 +277,7 @@ export default function GoalsPage() {
     } finally { setLoading(false); }
   }, []);
 
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { load(true); }, [load]);
 
   const filtered = filter === 'all' ? goals : goals.filter(g => g.status === filter);
 
